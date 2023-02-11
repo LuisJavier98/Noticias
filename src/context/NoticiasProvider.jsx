@@ -16,7 +16,6 @@ const NoticiasProvider = ({ children }) => {
     const consultarAPI = async () => {
       const url = `https://newsapi.org/v2/top-headlines?country=ar&category=${categoria}&apikey=${import.meta.env.VITE_API_KEY}`
       const { data } = await axios(url)
-      console.log(data)
       setnoticias(data.articles)
       settotalNoticias(data.totalResults)
       setpagina(1)
@@ -28,7 +27,6 @@ const NoticiasProvider = ({ children }) => {
     const consultarAPI = async () => {
       const url = `https://newsapi.org/v2/top-headlines?country=ar&category=${categoria}&page=${pagina}&apikey=${import.meta.env.VITE_API_KEY}`
       const { data } = await axios(url)
-      console.log(data)
       setnoticias(data.articles)
       settotalNoticias(data.totalResults)
     }

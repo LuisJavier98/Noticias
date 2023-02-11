@@ -4,7 +4,6 @@ import ListadoNoticias from './components/ListadoNoticias';
 import NoticiasProvider from './context/NoticiasProvider';
 
 function App() {
-  console.log(window)
 
   return (
     <NoticiasProvider>
